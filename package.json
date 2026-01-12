@@ -1,0 +1,31 @@
+{
+  "name": "js-chat-app",
+  "version": "1.0.0",
+  "description": "A real-time chat application using Socket.io. Features include message broadcasting, 'typing...' status indicators, read receipts, and room-based channels.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webkolog/js-chat-app.git"
+  },
+  "keywords": [
+    "realtime",
+    "chat",
+    "socket.io",
+    "express",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webkolog/js-chat-app/issues"
+  },
+  "homepage": "https://github.com/webkolog/js-chat-app#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
+}
