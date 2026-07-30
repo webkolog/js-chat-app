@@ -32,7 +32,7 @@
 
 1. Clone or download the repository to your local machine:
 ```bash
-   git clone [https://github.com/webkolog/js-chat-app.git](https://github.com/webkolog/js-chat-app.git)
+   git clone https://github.com/webkolog/js-chat-app.git
    cd js-chat-app
 ```
 
