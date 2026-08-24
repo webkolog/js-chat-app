@@ -19,22 +19,17 @@ io.on('connection', (socket) => {
 
     // Send Message
     socket.on('send_message', (data) => {
-        // data: { room, message, sender, msgId }
-        // Print the message to the terminal:
         console.log(`[MESSAGE] Room: ${data.room} | Sender: ${data.sender} | Content: ${data.message}`);
-        // Then broadcast it to the room:
         io.to(data.room).emit('receive_message', data);
     });
 
     // Typing Status
     socket.on('typing', (data) => {
-        // Broadcast "typing" status to everyone in the room except the sender
         socket.to(data.room).emit('display_typing', data);
     });
 
     // Read Receipt
     socket.on('message_read', (data) => {
-        // Notify the sender that the message has been read
         socket.to(data.room).emit('update_read_status', data);
     });
 
@@ -43,7 +38,12 @@ io.on('connection', (socket) => {
     });
 });
 
-const PORT = 3000;
-server.listen(PORT, () => {
+const PORT = process.env.PORT || 3000;
+
+if (require.main === module) {
+  server.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
-});
+  });
+}
+
+module.exports = { app, server, io };
