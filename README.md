@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node Version Required](https://img.shields.io/badge/node-%3E%3D%2018.0.0-339933.svg)](https://nodejs.org)
+[![Node.js CI & Socket.io Tests](https://github.com/webkolog/js-chat-app/actions/workflows/test.yml/badge.svg)](https://github.com/webkolog/js-chat-app/actions/workflows/test.yml)
 
 **Version:** 1.0.0
 
